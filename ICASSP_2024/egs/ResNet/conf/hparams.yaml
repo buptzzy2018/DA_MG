@@ -1,0 +1,50 @@
+apply_metric: true
+aug_prob: 0.6
+auto_lr: false
+batch_size: 128
+checkpoint_path: exp_cnc/checkpoints/avg_model_only.ckpt
+data_key_level: 2
+dev_list_path: ''
+distributed_backend: dp
+embedding_dim: 256
+eval_frames: 0
+eval_interval: 1
+eval_list_path: data/eval/wav.scp
+evaluate: false
+exp_dir: exp_cnc_lmft
+extract: false
+gpus: 2
+keep_loss_weight: true
+last_n: 5
+learning_rate: 0.0001
+lmft: true
+loss_type: aamsoftmax-wespeaker
+lr_gamma: 0.9
+lr_step_size: 1
+margin: 0.5
+margin_scheduler:
+  final_margin: 0.5
+  fix_start_epoch: 1
+  increase_start_epoch: 1
+  increase_type: exp
+  initial_margin: 0.5
+  update_margin: true
+max_epochs: 10
+max_frames: 601
+max_seg_per_spk: 500
+min_frames: 600
+musan_list_path: data/musan_lst.csv
+nPerSpeaker: 1
+n_mels: 80
+nnet_type: ResNet34
+num_workers: 16
+pooling_type: ASP
+reload_dataloaders_every_epoch: true
+rirs_list_path: data/rirs_lst.csv
+sample_rate: 16000
+save_interval: 1
+scale: 32
+scores_path: tmp.foo
+speed_perturb: true
+train_list_path: data/train_lst.csv
+trials_path: data/trials/CNC-Eval-Core.lst
